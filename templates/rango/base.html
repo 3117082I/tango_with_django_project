@@ -5,22 +5,20 @@
 <html>
 <head>
     <title>
-        Rango -
-        {% block title_block %}
-            How to Tango with Django!
-        {% endblock %}
-    </title>
+        Rango - {% block title_block %}How to Tango with Django!{% endblock %}</title>
 </head>
 <body>
 <div>
-{% block sidebar_block %}
-{% get_category_list %}
-{% endblock %}
+    {% block sidebar_block %}
+        {% get_category_list %}
+    {% endblock %}
 </div>
 <div>
-        <a href="{% url 'rango:add_category' %}">Add a New Category</a>
-        <a href="{% url 'rango:about' %}">About</a>
-        <a href="{% url 'rango:index' %}">Index</a>
+    <ul>
+        <li><a href="{% url 'rango:add_category' %}">Add a New Category</a></li>
+        <li><a href="{% url 'rango:about' %}">About</a></li>
+        <li><a href="{% url 'rango:index' %}">Index</a></li>
+    </ul>
 </div>
 <hr />
 <div>
